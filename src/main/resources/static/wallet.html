@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crypto Wallet</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<div class="wallet-page">
+
+    <!-- HEADER -->
+
+    <header class="wallet-header">
+
+        <div>
+            <h1>Crypto Wallet</h1>
+            <p>Secure digital payments</p>
+        </div>
+
+        <button class="logout-btn" onclick="logout()">
+            Logout
+        </button>
+
+    </header>
+
+
+    <!-- WELCOME -->
+
+    <section class="welcome-section">
+
+        <p>Welcome back</p>
+
+        <h2>
+            <span id="username">User</span>
+        </h2>
+
+    </section>
+
+
+    <!-- BALANCE -->
+
+    <section class="balance-card">
+
+        <div class="balance-top">
+
+            <span>Available Balance</span>
+
+            <span class="wallet-status">
+                Active
+            </span>
+
+        </div>
+
+        <div class="balance">
+
+            <span id="balance">0.0000</span>
+
+            <span class="currency">
+                COINS
+            </span>
+
+        </div>
+
+        <p class="balance-description">
+            Your current wallet balance
+        </p>
+
+    </section>
+
+
+    <!-- ACTIONS -->
+
+    <section class="wallet-content">
+
+        <!-- SEND MONEY -->
+
+        <div class="card send-card">
+
+            <h2>Send Money</h2>
+
+            <p class="card-description">
+                Send coins instantly to another user
+                using their username.
+            </p>
+
+
+            <form id="sendForm">
+
+                <label for="receiverUsername">
+                    Receiver Username
+                </label>
+
+                <input
+                    type="text"
+                    id="receiverUsername"
+                    placeholder="Enter friend's username"
+                    required
+                >
+
+
+                <label for="sendAmount">
+                    Amount
+                </label>
+
+                <input
+                    type="number"
+                    id="sendAmount"
+                    placeholder="0.00"
+                    min="0.0001"
+                    step="0.0001"
+                    required
+                >
+
+
+                <button
+                    type="submit"
+                    class="send-btn">
+
+                    Send Coins
+
+                </button>
+
+            </form>
+
+
+            <p id="sendMessage"></p>
+
+        </div>
+
+
+        <!-- QUICK INFO -->
+
+        <div class="card info-card">
+
+            <h2>Wallet Information</h2>
+
+            <div class="info-row">
+
+                <span>Account</span>
+
+                <strong id="accountUsername">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span>Status</span>
+
+                <strong class="active">
+                    Active
+                </strong>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span>Currency</span>
+
+                <strong>
+                    COINS
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TRANSACTION HISTORY -->
+
+    <section class="transactions-section">
+
+        <div class="section-header">
+
+            <div>
+
+                <h2>Transaction History</h2>
+
+                <p>
+                    Your recent wallet activity
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="transactionList"
+            class="transaction-list">
+
+            <div class="loading">
+                Loading transactions...
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            Crypto Wallet • Secure & Simple Digital Payments
+        </p>
+
+    </footer>
+
+</div>
+
+
+<script src="/app.js"></script>
+
+</body>
+
+</html>

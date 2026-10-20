@@ -1,0 +1,937 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0f1b2d;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   MAIN PAGE
+========================= */
+
+.wallet-page {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 0 50px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.wallet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.wallet-header h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.wallet-header p {
+    color: #9daabd;
+    font-size: 14px;
+}
+
+
+/* =========================
+   LOGOUT
+========================= */
+
+.logout-btn {
+    border: none;
+    background: #263b56;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.logout-btn:hover {
+    background: #34516f;
+}
+
+
+/* =========================
+   WELCOME
+========================= */
+
+.welcome-section {
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    color: #9daabd;
+    margin-bottom: 5px;
+}
+
+.welcome-section h2 {
+    font-size: 28px;
+}
+
+
+/* =========================
+   BALANCE CARD
+========================= */
+
+.balance-card {
+    background: linear-gradient(
+        135deg,
+        #29496b,
+        #1d344e
+    );
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.balance-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #d8e2ed;
+
+    margin-bottom: 20px;
+}
+
+.wallet-status {
+    background: #193d35;
+    color: #69d6b0;
+
+    padding: 6px 14px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+}
+
+.balance {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+}
+
+#balance {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.currency {
+    font-size: 16px;
+    color: #b9c8d9;
+}
+
+.balance-description {
+    color: #9fb1c4;
+    margin-top: 10px;
+}
+
+
+/* =========================
+   CONTENT GRID
+========================= */
+
+.wallet-content {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 25px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    background: #17263a;
+
+    border: 1px solid #263b52;
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.card-description {
+    color: #8fa2b7;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+label {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+
+    color: #dce5ee;
+}
+
+input {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    margin-bottom: 18px;
+
+    border-radius: 8px;
+
+    border: 1px solid #40546b;
+
+    background: #101d2e;
+
+    color: white;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #6688a8;
+}
+
+input::placeholder {
+    color: #73869b;
+}
+
+
+/* =========================
+   SEND BUTTON
+========================= */
+
+.send-btn {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #315a7e;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.send-btn:hover {
+    background: #3d6d96;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+#sendMessage {
+    margin-top: 15px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.success {
+    color: #67d6ad;
+}
+
+.error {
+    color: #ff7777;
+}
+
+
+/* =========================
+   WALLET INFORMATION
+========================= */
+
+.info-card {
+    height: fit-content;
+}
+
+.info-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 17px 0;
+
+    border-bottom: 1px solid #2a3d52;
+
+    color: #9baabd;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-row strong {
+    color: white;
+}
+
+.info-row .active {
+    color: #67d6ad;
+}
+
+
+/* =========================
+   TRANSACTIONS
+========================= */
+
+.transactions-section {
+    background: #17263a;
+
+    border: 1px solid #263b52;
+
+    border-radius: 16px;
+
+    padding: 25px;
+}
+
+.section-header {
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    margin-bottom: 6px;
+}
+
+.section-header p {
+    color: #8fa2b7;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   TRANSACTION
+========================= */
+
+.transaction-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.transaction {
+    background: #101d2e;
+
+    border: 1px solid #263b52;
+
+    border-radius: 10px;
+
+    padding: 18px;
+
+    transition: 0.2s;
+}
+
+.transaction:hover {
+    border-color: #48627d;
+}
+
+.transaction p {
+    margin: 7px 0;
+
+    color: #aebdcd;
+}
+
+.transaction strong {
+    color: white;
+}
+
+.transaction hr {
+    border: none;
+
+    border-top: 1px solid #293d52;
+
+    margin-top: 14px;
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.loading {
+    color: #899bad;
+
+    padding: 20px 0;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    margin-top: 30px;
+
+    color: #718398;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 750px) {
+
+    .wallet-page {
+        width: 92%;
+        padding-top: 20px;
+    }
+
+    .wallet-header {
+        align-items: flex-start;
+    }
+
+    .wallet-header h1 {
+        font-size: 26px;
+    }
+
+    .wallet-content {
+        grid-template-columns: 1fr;
+    }
+
+    #balance {
+        font-size: 38px;
+    }
+
+    .balance-card {
+        padding: 22px;
+    }
+}
+/* =====================================================
+   LOGIN & REGISTER PAGES
+===================================================== */
+
+.auth-body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b1627,
+            #162b43,
+            #203b59
+        );
+
+    color: white;
+}
+
+
+/* =====================================================
+   AUTH PAGE
+===================================================== */
+
+.auth-page {
+
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+}
+
+
+/* =====================================================
+   LEFT INTRODUCTION
+===================================================== */
+
+.auth-intro {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 60px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #102238,
+            #183450
+        );
+
+}
+
+
+.intro-content {
+
+    max-width: 480px;
+
+}
+
+
+.intro-content h1 {
+
+    font-size: 52px;
+
+    margin: 0 0 20px;
+
+    letter-spacing: -1px;
+
+}
+
+
+.intro-title {
+
+    font-size: 27px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+
+}
+
+
+.intro-text {
+
+    color: #aebed0;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+}
+
+
+.intro-line {
+
+    width: 70px;
+
+    height: 4px;
+
+    background: #6e9bc2;
+
+    border-radius: 10px;
+
+    margin: 30px 0;
+
+}
+
+
+.intro-small {
+
+    color: #8ea5bb;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =====================================================
+   RIGHT SIDE
+===================================================== */
+
+.auth-card-container {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px;
+
+}
+
+
+/* =====================================================
+   AUTH CARD
+===================================================== */
+
+.auth-card {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    background: #ffffff;
+
+    color: #18283a;
+
+    padding: 45px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 25px 60px
+        rgba(0, 0, 0, 0.35);
+
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.auth-heading {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+
+.auth-heading h2 {
+
+    font-size: 31px;
+
+    margin: 0 0 10px;
+
+    color: #172a40;
+
+}
+
+
+.auth-heading p {
+
+    margin: 0;
+
+    color: #748397;
+
+    font-size: 15px;
+
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.form-group {
+
+    margin-bottom: 22px;
+
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #26384c;
+
+}
+
+
+.form-group input {
+
+    width: 100%;
+
+    height: 50px;
+
+    padding: 0 15px;
+
+    border: 1px solid #d4dbe3;
+
+    border-radius: 9px;
+
+    background: #f8fafc;
+
+    color: #1b2b3c;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+
+}
+
+
+.form-group input:focus {
+
+    border-color: #446887;
+
+    background: white;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(68, 104, 135, 0.12);
+
+}
+
+
+.form-group input::placeholder {
+
+    color: #9ba7b4;
+
+}
+
+
+/* =====================================================
+   AUTH BUTTON
+===================================================== */
+
+.auth-button {
+
+    width: 100%;
+
+    height: 52px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #284b6b,
+            #37698f
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+    margin-top: 5px;
+
+}
+
+
+.auth-button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(40, 75, 107, 0.3);
+
+}
+
+
+.auth-button:active {
+
+    transform: translateY(0);
+
+}
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+.auth-message {
+
+    text-align: center;
+
+    min-height: 20px;
+
+    margin: 15px 0 0;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+}
+
+
+/* =====================================================
+   LOGIN / REGISTER SWITCH
+===================================================== */
+
+.auth-switch {
+
+    text-align: center;
+
+    margin-top: 28px;
+
+    padding-top: 22px;
+
+    border-top: 1px solid #e5e9ee;
+
+    font-size: 14px;
+
+    color: #758397;
+
+}
+
+
+.auth-switch a {
+
+    color: #294f72;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    margin-left: 5px;
+
+}
+
+
+.auth-switch a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* =====================================================
+   SUCCESS / ERROR
+===================================================== */
+
+.success {
+
+    color: #208060;
+
+}
+
+
+.error {
+
+    color: #c43d3d;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .auth-page {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .auth-intro {
+
+        min-height: 300px;
+
+        padding: 40px 30px;
+
+        text-align: center;
+
+    }
+
+
+    .intro-content {
+
+        max-width: 600px;
+
+    }
+
+
+    .intro-content h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    .intro-title {
+
+        font-size: 22px;
+
+    }
+
+
+    .intro-line {
+
+        margin:
+            25px auto;
+
+    }
+
+
+    .auth-card-container {
+
+        padding: 30px 20px;
+
+    }
+
+
+    .auth-card {
+
+        padding: 32px 25px;
+
+    }
+
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Crypto Wallet - Register</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+
+<body class="auth-body">
+
+
+<div class="auth-page">
+
+
+    <!-- LEFT SECTION -->
+
+    <div class="auth-intro">
+
+        <div class="intro-content">
+
+            <h1>Crypto Wallet</h1>
+
+            <p class="intro-title">
+                Start your digital wallet.
+            </p>
+
+            <p class="intro-text">
+                Create your account and start
+                sending and receiving coins
+                with other users.
+            </p>
+
+            <div class="intro-line"></div>
+
+            <p class="intro-small">
+                Fast. Simple. Secure.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- REGISTER SECTION -->
+
+    <div class="auth-card-container">
+
+        <div class="auth-card">
+
+
+            <div class="auth-heading">
+
+                <h2>Create Account</h2>
+
+                <p>
+                    Register to create your wallet
+                </p>
+
+            </div>
+
+
+            <form id="registerForm">
+
+
+                <!-- USERNAME -->
+
+                <div class="form-group">
+
+                    <label for="registerUsername">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerUsername"
+                        placeholder="Choose a username"
+                        autocomplete="username"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="registerPassword">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="registerPassword"
+                        placeholder="Create a password"
+                        autocomplete="new-password"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- REGISTER BUTTON -->
+
+                <button
+                    type="submit"
+                    class="auth-button">
+
+                    Create Account
+
+                </button>
+
+
+                <!-- MESSAGE -->
+
+                <p
+                    id="registerMessage"
+                    class="auth-message">
+                </p>
+
+
+            </form>
+
+
+            <!-- LOGIN LINK -->
+
+            <div class="auth-switch">
+
+                <span>
+                    Already have an account?
+                </span>
+
+                <a href="/login.html">
+                    Login
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="/app.js"></script>
+
+</body>
+
+</html>

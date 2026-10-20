@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Crypto Wallet - Login</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+
+<body class="auth-body">
+
+
+<div class="auth-page">
+
+
+    <!-- LEFT SECTION -->
+
+    <div class="auth-intro">
+
+        <div class="intro-content">
+
+            <h1>Crypto Wallet</h1>
+
+            <p class="intro-title">
+                Your money. Your control.
+            </p>
+
+            <p class="intro-text">
+                A simple and secure digital wallet
+                for sending and receiving coins
+                with your friends.
+            </p>
+
+            <div class="intro-line"></div>
+
+            <p class="intro-small">
+                Secure payments made simple.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- LOGIN SECTION -->
+
+    <div class="auth-card-container">
+
+        <div class="auth-card">
+
+
+            <div class="auth-heading">
+
+                <h2>Welcome Back</h2>
+
+                <p>
+                    Login to access your wallet
+                </p>
+
+            </div>
+
+
+            <form id="loginForm">
+
+
+                <!-- USERNAME -->
+
+                <div class="form-group">
+
+                    <label for="loginUsername">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="loginUsername"
+                        placeholder="Enter your username"
+                        autocomplete="username"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="loginPassword">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- LOGIN BUTTON -->
+
+                <button
+                    type="submit"
+                    class="auth-button">
+
+                    Login
+
+                </button>
+
+
+                <!-- MESSAGE -->
+
+                <p
+                    id="loginMessage"
+                    class="auth-message">
+                </p>
+
+
+            </form>
+
+
+            <!-- REGISTER LINK -->
+
+            <div class="auth-switch">
+
+                <span>
+                    Don't have an account?
+                </span>
+
+                <a href="/register.html">
+                    Register
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="/app.js"></script>
+
+</body>
+
+</html>
